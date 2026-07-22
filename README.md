@@ -163,20 +163,7 @@ Vigilia-AI/
 
 ---
 
-# 📸 Screenshots
-
-> *(Screenshots will be added after UI polishing.)*
-
-- Login Page
-- Dashboard
-- Monitoring
-- Threat Detection
-- Risk Analysis
-- Desktop Notifications
-
----
-
-# ⚙ Installation
+#  Installation
 
 Clone the repository
 
@@ -224,7 +211,7 @@ npm run dev
 
 ---
 
-# 🎯 Hackathon Theme
+#  Hackathon Theme
 
 **ET AI Hackathon**
 
@@ -235,7 +222,7 @@ Vigilia AI demonstrates how intelligent monitoring, AI-assisted threat detection
 
 ---
 
-# 👥 Team
+#  Team
 
 ## Team Name
 

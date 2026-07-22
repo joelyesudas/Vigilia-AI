@@ -17,7 +17,7 @@
 
 ---
 
-# 📖 Overview
+#  Overview
 
 Vigilia AI is an **AI-powered desktop Security Operations Center (SOC)** that continuously monitors systems, detects cyber threats, analyzes security events, maps attacks to the **MITRE ATT&CK Framework**, and provides real-time security insights through an interactive dashboard.
 
@@ -25,7 +25,7 @@ Designed for **Critical National Infrastructure (CNI)**, Vigilia AI helps securi
 
 ---
 
-# 🚨 Problem Statement
+#  Problem Statement
 
 Critical infrastructure organizations generate thousands of security events every day.
 
@@ -40,7 +40,7 @@ Security analysts spend valuable time manually reviewing logs instead of respond
 
 ---
 
-# 💡 Our Solution
+#  Our Solution
 
 Vigilia AI provides an intelligent desktop-based SOC that:
 
@@ -54,7 +54,7 @@ Vigilia AI provides an intelligent desktop-based SOC that:
 
 ---
 
-# ✨ Key Features
+#  Key Features
 
 ## 🤖 AI Threat Detection
 
@@ -121,14 +121,14 @@ Built using Electron for a modern cross-platform desktop experience.
 
 ---
 
-# 🔄 Workflow
+#  Workflow
 
 <img width="1024" height="1536" alt="workflow" src="https://github.com/user-attachments/assets/29d686df-aa6f-4843-8aeb-bfda9446f08c" />
 
 
 ---
 
-# 🛠 Tech Stack
+# Tech Stack
 
 | Layer | Technology |
 |--------|------------|
@@ -143,7 +143,7 @@ Built using Electron for a modern cross-platform desktop experience.
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 Vigilia-AI/
@@ -240,10 +240,6 @@ Vigilia AI demonstrates how intelligent monitoring, AI-assisted threat detection
 ## Team Name
 
 **CodeBreakers**
-
-### Project Type
-
-**Group Project**
 
 ### Team Members
 

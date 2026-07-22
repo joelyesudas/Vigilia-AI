@@ -1,0 +1,267 @@
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
+
+export const exportExecutiveReport = ({
+  summary,
+  threats,
+  reportInfo,
+}) => {
+  const doc = new jsPDF();
+
+  // -----------------------------
+  // COLORS
+  // -----------------------------
+  const PRIMARY = [37, 99, 235];
+  const DARK = [15, 23, 42];
+  const GREEN = [34, 197, 94];
+  const RED = [239, 68, 68];
+  const ORANGE = [249, 115, 22];
+  const GRAY = [100, 116, 139];
+
+  // -----------------------------
+  // HEADER
+  // -----------------------------
+  doc.setFillColor(...DARK);
+  doc.rect(0, 0, 210, 35, "F");
+
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(26);
+  doc.text("VIGILIA AI", 105, 15, { align: "center" });
+
+  doc.setFontSize(12);
+  doc.text(
+    "Enterprise Cyber Security Report",
+    105,
+    24,
+    { align: "center" }
+  );
+
+  doc.setTextColor(...PRIMARY);
+  doc.setFontSize(11);
+  doc.text(
+    "Always Watching. Always Protecting.",
+    105,
+    31,
+    { align: "center" }
+  );
+
+  // -----------------------------
+  // REPORT INFO
+  // -----------------------------
+  doc.setTextColor(0, 0, 0);
+
+  doc.setFontSize(18);
+  doc.setFont("helvetica", "bold");
+  doc.text("Executive Summary", 15, 50);
+
+  doc.setFontSize(11);
+  doc.setFont("helvetica", "normal");
+
+  doc.text(
+    `Generated: ${
+      reportInfo.generatedAt || new Date().toLocaleString()
+    }`,
+    15,
+    60
+  );
+
+  doc.text(
+    `Report ID: ${
+      reportInfo.reportId || "VG-" + Date.now()
+    }`,
+    15,
+    68
+  );
+
+  // -----------------------------
+  // KPI BOXES
+  // -----------------------------
+  const drawCard = (
+    x,
+    y,
+    title,
+    value,
+    color
+  ) => {
+    doc.setDrawColor(...color);
+    doc.setLineWidth(0.6);
+    doc.roundedRect(x, y, 42, 24, 3, 3);
+
+    doc.setTextColor(...GRAY);
+    doc.setFontSize(9);
+    doc.text(title, x + 3, y + 7);
+
+    doc.setTextColor(...color);
+    doc.setFontSize(16);
+    doc.setFont("helvetica", "bold");
+    doc.text(String(value), x + 3, y + 17);
+  };
+
+  drawCard(
+    15,
+    78,
+    "Security Score",
+    `${summary.securityScore}%`,
+    GREEN
+  );
+
+  drawCard(
+    60,
+    78,
+    "Risk Level",
+    summary.riskLevel,
+    RED
+  );
+
+  drawCard(
+    105,
+    78,
+    "Threats",
+    summary.totalThreats,
+    ORANGE
+  );
+
+  drawCard(
+    150,
+    78,
+    "Events",
+    summary.totalEvents,
+    PRIMARY
+  );
+
+  // -----------------------------
+  // SUMMARY
+  // -----------------------------
+  doc.setFont("helvetica", "bold");
+  doc.setTextColor(...PRIMARY);
+  doc.setFontSize(15);
+  doc.text("AI Executive Assessment", 15, 118);
+
+  doc.setTextColor(40, 40, 40);
+  doc.setFontSize(11);
+  doc.setFont("helvetica", "normal");
+
+  const summaryText = `
+Vigilia AI analyzed ${summary.totalEvents} security events.
+
+Detected ${summary.totalThreats} potential threats.
+
+Overall Risk Level: ${summary.riskLevel}
+
+Security Score: ${summary.securityScore}%
+
+AI recommends immediate investigation of critical events
+and implementation of recommended mitigations.
+`;
+
+  doc.text(summaryText, 15, 126);
+
+  // -----------------------------
+  // PAGE 2
+  // -----------------------------
+  doc.addPage();
+
+  doc.setFont("helvetica", "bold");
+  doc.setTextColor(...PRIMARY);
+  doc.setFontSize(18);
+  doc.text("Detected Threats", 15, 20);
+
+  autoTable(doc, {
+    startY: 30,
+
+    head: [[
+      "Threat",
+      "Severity",
+      "MITRE",
+      "IP Address",
+      "Recommendation",
+    ]],
+
+    body: threats.map((t) => [
+      t.type,
+      t.severity,
+      t.mitre,
+      t.ip || "-",
+      t.recommendation,
+    ]),
+
+    headStyles: {
+      fillColor: PRIMARY,
+    },
+
+    styles: {
+      fontSize: 9,
+    },
+  });
+
+  // -----------------------------
+  // PAGE 3
+  // -----------------------------
+  doc.addPage();
+
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(18);
+  doc.setTextColor(...PRIMARY);
+
+  doc.text("AI Recommendations", 15, 20);
+
+  const recommendations = [
+    "Enable Multi-Factor Authentication.",
+    "Immediately isolate infected endpoints.",
+    "Block malicious IP addresses.",
+    "Review firewall policies.",
+    "Run enterprise malware scans.",
+    "Reset compromised credentials.",
+    "Continuously monitor suspicious endpoints.",
+  ];
+
+  let y = 35;
+
+  recommendations.forEach((item) => {
+    doc.setTextColor(40, 40, 40);
+
+    doc.setFontSize(12);
+
+    doc.text("• " + item, 18, y);
+
+    y += 10;
+  });
+
+  doc.setFontSize(18);
+  doc.setTextColor(...PRIMARY);
+
+  doc.text("MITRE ATT&CK Mapping", 15, 120);
+
+  const mitres = [...new Set(threats.map((t) => t.mitre))];
+
+  y = 135;
+
+  mitres.forEach((m) => {
+    doc.text("• " + m, 20, y);
+
+    y += 10;
+  });
+
+  doc.setFontSize(11);
+
+  doc.setTextColor(...GRAY);
+
+  doc.text(
+    "Generated by Vigilia AI",
+    105,
+    275,
+    { align: "center" }
+  );
+
+  doc.text(
+    "Always Watching. Always Protecting.",
+    105,
+    282,
+    { align: "center" }
+  );
+
+  doc.save(
+    `Vigilia_AI_Report_${Date.now()}.pdf`
+  );
+};

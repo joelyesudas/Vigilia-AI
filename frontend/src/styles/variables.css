@@ -1,0 +1,27 @@
+:root{
+
+  --bg:#08101F;
+  --bg-light:#0E1830;
+  --card:#111C32;
+  --card-light:#182744;
+
+  --primary:#3B82F6;
+  --primary-light:#60A5FA;
+
+  --success:#22C55E;
+  --warning:#F59E0B;
+  --danger:#EF4444;
+
+  --text:#F8FAFC;
+  --text2:#CBD5E1;
+  --text3:#94A3B8;
+
+  --border:#24324D;
+
+  --radius:18px;
+
+  --shadow:
+      0 10px 40px rgba(0,0,0,.35);
+
+  --transition:.3s ease;
+}

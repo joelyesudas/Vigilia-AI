@@ -123,27 +123,8 @@ Built using Electron for a modern cross-platform desktop experience.
 
 # 🔄 Workflow
 
-```text
-User Login
-      │
-      ▼
-System Monitoring
-      │
-      ▼
-Security Scan
-      │
-      ▼
-AI Threat Detection
-      │
-      ▼
-MITRE ATT&CK Mapping
-      │
-      ▼
-Risk Assessment
-      │
-      ▼
-Dashboard & Notifications
-```
+<img width="1024" height="1536" alt="workflow" src="https://github.com/user-attachments/assets/29d686df-aa6f-4843-8aeb-bfda9446f08c" />
+
 
 ---
 
@@ -267,9 +248,9 @@ Vigilia AI demonstrates how intelligent monitoring, AI-assisted threat detection
 ### Team Members
 
 - Joel Yesudas
-- Member 2
-- Member 3
-- Member 4
+- Joel Joseph
+- Viral Kumar Jain
+- Shone Thomas
 
 ---
 

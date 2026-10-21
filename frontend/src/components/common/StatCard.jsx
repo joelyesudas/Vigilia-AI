@@ -125,11 +125,8 @@ box-shadow:0 12px 25px rgba(37,99,235,.22);
 }
 
 .compact{
-
-padding:16px;
-
-min-height:105px;
-
+    padding:14px;
+    min-height:105px;
 }
 
 .glow{
@@ -205,13 +202,9 @@ box-shadow:0 0 10px currentColor;
 }
 
 .title{
-
-color:#94A3B8;
-
-font-size:13px;
-
-margin-bottom:8px;
-
+    color:#94A3B8;
+    font-size:12px;
+    margin-bottom:6px;
 }
 
 .value{
@@ -225,9 +218,11 @@ line-height:1;
 }
 
 .compact .value{
-
-font-size:24px;
-
+    font-size:20px;
+    font-weight:800;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
       `}</style>

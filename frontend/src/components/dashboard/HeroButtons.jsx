@@ -18,6 +18,8 @@ export default function HeroButtons() {
 
   const uploadSelectedFile = async (file) => {
     try {
+      console.log("TOKEN:", token);
+console.log("LOCAL TOKEN:", localStorage.getItem("token"));
       const formData = new FormData();
 
       formData.append("log", file);

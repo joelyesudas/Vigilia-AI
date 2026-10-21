@@ -30,9 +30,14 @@ export const protect = async (req, res, next) => {
       });
     }
   } catch (error) {
-    return res.status(401).json({
-      success: false,
-      message: "Invalid token",
-    });
-  }
+  console.error("========== JWT ERROR ==========");
+  console.error("Message:", error.message);
+  console.error("Token:", token);
+  console.error("JWT_SECRET exists:", !!process.env.JWT_SECRET);
+
+  return res.status(401).json({
+    success: false,
+    message: "Invalid token",
+  });
+}
 };

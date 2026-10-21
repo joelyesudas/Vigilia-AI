@@ -75,20 +75,17 @@ export default function HeroStats() {
       color: "#F59E0B",
     },
     {
-      title: "Network",
-      value: isSystemScan
-        ? summary.network || "Online"
-        : "—",
-      color: "#22C55E",
-    },
+  title: "Network",
+  value: isSystemScan ? "ON" : "—",
+  color: "#22C55E",
+},
   ];
 
   return (
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(8,1fr)",
-        gap: 12,
+gridTemplateColumns: "repeat(8,1fr)"
       }}
     >
       {stats.map((stat) => (

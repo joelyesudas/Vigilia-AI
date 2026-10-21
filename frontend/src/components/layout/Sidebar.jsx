@@ -228,7 +228,7 @@ const handleLogout = () => {
           scale: 1.03,
         }}
         style={{
-          marginTop: "auto",
+          marginTop: 35,
           background:
             "linear-gradient(180deg,#111827,#0B1220)",
           border: "1px solid rgba(56,189,248,.15)",

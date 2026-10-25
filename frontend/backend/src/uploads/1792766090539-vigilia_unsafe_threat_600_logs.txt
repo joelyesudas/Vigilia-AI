@@ -1,0 +1,605 @@
+# VIGILIA AI — SYNTHETIC THREAT-SIMULATION LOGS (600 entries)
+# For authorized defensive testing only. All attacker IPs are RFC 5737 documentation ranges, not real public attacker addresses.
+# Contains simulated brute-force attempts, blocked SQL injection, suspicious PowerShell, unexpected privilege grants, and simulated malicious-file alerts.
+# Detection outcome depends on the Vigilia AI parser and detection rules; review findings before treating them as real incidents.
+
+2026-10-23T08:00:00Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=4
+2026-10-23T08:00:22Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=45 window=60s
+2026-10-23T08:00:38Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:01:42Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:02:40Z ALERT privilege_change host=workstation-07 user=root action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T08:03:00Z ALERT endpoint host=win-02 user=admin src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:03:06Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T08:02:20Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=56 window=60s
+2026-10-23T08:03:28Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:07:03Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:07:20Z ALERT privilege_change host=workstation-07 user=jdoe action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T08:07:20Z ALERT endpoint host=web-01 user=admin src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:08:24Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T08:06:56Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=31 window=60s
+2026-10-23T08:09:06Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:05:45Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:08:00Z ALERT privilege_change host=win-02 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T08:07:56Z ALERT endpoint host=web-01 user=svc_backup src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:09:00Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=6
+2026-10-23T08:07:36Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=27 window=60s
+2026-10-23T08:08:40Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:12:15Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:11:00Z ALERT privilege_change host=win-02 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T08:12:39Z ALERT endpoint host=web-01 user=admin src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:15:12Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T08:15:25Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=18 window=60s
+2026-10-23T08:16:54Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:12:36Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:14:56Z ALERT privilege_change host=web-01 user=jdoe action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T08:16:26Z ALERT endpoint host=web-01 user=jdoe src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:18:30Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=9
+2026-10-23T08:24:17Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=19 window=60s
+2026-10-23T08:11:12Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:13:45Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:18:42Z ALERT privilege_change host=web-01 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T08:22:45Z ALERT endpoint host=auth-01 user=finance_user src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:20:24Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=12
+2026-10-23T08:14:48Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=41 window=60s
+2026-10-23T08:20:16Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:16:15Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:23:20Z ALERT privilege_change host=db-01 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T08:13:40Z ALERT endpoint host=web-01 user=svc_backup src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:31:30Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T08:23:39Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=54 window=60s
+2026-10-23T08:26:24Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:18:00Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:22:14Z ALERT privilege_change host=auth-01 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T08:14:53Z ALERT endpoint host=web-01 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:22:24Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T08:17:58Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=33 window=60s
+2026-10-23T08:37:30Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:16:09Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:19:56Z ALERT privilege_change host=auth-01 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T08:39:45Z ALERT endpoint host=auth-01 user=admin src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:16:12Z WARNING auth failed user=root src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=12
+2026-10-23T08:37:35Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=36 window=60s
+2026-10-23T08:22:24Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:18:03Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:31:54Z ALERT privilege_change host=workstation-07 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T08:33:26Z ALERT endpoint host=web-01 user=svc_backup src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:20:00Z WARNING auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=10
+2026-10-23T08:37:37Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=60 window=60s
+2026-10-23T08:37:12Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:25:12Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:23:28Z ALERT privilege_change host=win-02 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T08:19:30Z ALERT endpoint host=auth-01 user=finance_user src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:22:00Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=6
+2026-10-23T08:51:22Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=28 window=60s
+2026-10-23T08:36:16Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:39:06Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:24:30Z ALERT privilege_change host=db-01 user=jdoe action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T08:48:31Z ALERT endpoint host=workstation-07 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:44:24Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T08:41:22Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=58 window=60s
+2026-10-23T08:38:14Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:52:30Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:40:32Z ALERT privilege_change host=workstation-07 user=root action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T08:26:57Z ALERT endpoint host=web-01 user=svc_backup src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:57:12Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=3
+2026-10-23T08:25:01Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=31 window=60s
+2026-10-23T08:52:00Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:02:06Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:04:14Z ALERT privilege_change host=db-01 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T08:24:54Z ALERT endpoint host=db-01 user=jdoe src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:03:00Z WARNING auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T09:03:45Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=47 window=60s
+2026-10-23T08:41:34Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:56:33Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:06:00Z ALERT privilege_change host=web-01 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T08:50:26Z ALERT endpoint host=auth-01 user=finance_user src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:31:30Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T08:56:07Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=45 window=60s
+2026-10-23T08:56:44Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:37:12Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:28:12Z ALERT privilege_change host=workstation-07 user=finance_user action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T09:04:55Z ALERT endpoint host=db-01 user=jdoe src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:02:24Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=12
+2026-10-23T09:14:22Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=44 window=60s
+2026-10-23T08:45:44Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:39:36Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:16:40Z ALERT privilege_change host=db-01 user=finance_user action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T08:50:30Z ALERT endpoint host=workstation-07 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:40:48Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T08:54:56Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=28 window=60s
+2026-10-23T09:07:36Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:06:30Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:08:54Z ALERT privilege_change host=win-02 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T08:32:06Z ALERT endpoint host=web-01 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:21:00Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=4
+2026-10-23T09:12:40Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=27 window=60s
+2026-10-23T09:09:40Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:42:33Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:46:40Z ALERT privilege_change host=web-01 user=root action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:13:27Z ALERT endpoint host=workstation-07 user=finance_user src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:19:48Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=9
+2026-10-23T09:01:20Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=33 window=60s
+2026-10-23T09:25:04Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:48:45Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:53:06Z ALERT privilege_change host=db-01 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T09:31:14Z ALERT endpoint host=workstation-07 user=admin src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:50:00Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T09:02:31Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=21 window=60s
+2026-10-23T08:48:48Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:36:54Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:59:56Z ALERT privilege_change host=win-02 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T09:25:25Z ALERT endpoint host=workstation-07 user=finance_user src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:52:30Z WARNING auth failed user=root src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=6
+2026-10-23T09:22:33Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=57 window=60s
+2026-10-23T09:14:40Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:23:51Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:47:40Z ALERT privilege_change host=auth-01 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:05:30Z ALERT endpoint host=win-02 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:01:36Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T08:39:54Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=59 window=60s
+2026-10-23T08:44:40Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:39:00Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:49:52Z ALERT privilege_change host=auth-01 user=admin action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T09:13:04Z ALERT endpoint host=win-02 user=jdoe src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:25:06Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=1
+2026-10-23T09:48:53Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=43 window=60s
+2026-10-23T09:33:20Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:43:24Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:46:30Z ALERT privilege_change host=workstation-07 user=admin action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T09:09:07Z ALERT endpoint host=workstation-07 user=root src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:48:00Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T09:14:55Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=45 window=60s
+2026-10-23T08:55:58Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:42:54Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:28:48Z ALERT privilege_change host=win-02 user=jdoe action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:04:34Z ALERT endpoint host=auth-01 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:32:30Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=3
+2026-10-23T09:23:03Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=35 window=60s
+2026-10-23T09:56:32Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:26:42Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:19:34Z ALERT privilege_change host=auth-01 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:25:15Z ALERT endpoint host=auth-01 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:10:12Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T09:34:12Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=40 window=60s
+2026-10-23T09:21:38Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:24:48Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T08:56:00Z ALERT privilege_change host=db-01 user=jdoe action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:33:55Z ALERT endpoint host=db-01 user=svc_backup src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:29:06Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T09:59:32Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=29 window=60s
+2026-10-23T09:13:48Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T08:52:15Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:00:52Z ALERT privilege_change host=auth-01 user=admin action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:15:09Z ALERT endpoint host=auth-01 user=root src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:04:24Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T09:32:57Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=21 window=60s
+2026-10-23T09:02:20Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:11:15Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:46:04Z ALERT privilege_change host=workstation-07 user=svc_backup action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T09:32:16Z ALERT endpoint host=auth-01 user=jdoe src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:18:18Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T10:02:30Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=23 window=60s
+2026-10-23T09:07:28Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:07:51Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:49:46Z ALERT privilege_change host=auth-01 user=jdoe action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:20:33Z ALERT endpoint host=win-02 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:15:00Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T09:45:35Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=22 window=60s
+2026-10-23T08:57:38Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:14:12Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:38:08Z ALERT privilege_change host=win-02 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T09:47:55Z ALERT endpoint host=auth-01 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T08:58:54Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T09:17:55Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=35 window=60s
+2026-10-23T09:52:48Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:59:42Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:38:10Z ALERT privilege_change host=auth-01 user=admin action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T09:38:41Z ALERT endpoint host=win-02 user=jdoe src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:24:00Z WARNING auth failed user=root src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T10:05:27Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=23 window=60s
+2026-10-23T09:30:32Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:26:15Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:44:32Z ALERT privilege_change host=auth-01 user=admin action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:35:13Z ALERT endpoint host=workstation-07 user=root src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:18:36Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T09:46:08Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=56 window=60s
+2026-10-23T10:23:20Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:00:18Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:28:08Z ALERT privilege_change host=web-01 user=root action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:28:52Z ALERT endpoint host=db-01 user=root src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:55:36Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T09:59:35Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=50 window=60s
+2026-10-23T10:20:46Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:36:36Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:22:08Z ALERT privilege_change host=win-02 user=finance_user action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T09:54:57Z ALERT endpoint host=db-01 user=root src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:41:30Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=6
+2026-10-23T10:38:15Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=32 window=60s
+2026-10-23T10:39:00Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:57:09Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:18:28Z ALERT privilege_change host=auth-01 user=admin action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:09:00Z ALERT endpoint host=win-02 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:02:24Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T09:19:34Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=57 window=60s
+2026-10-23T10:25:20Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:44:15Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:26:40Z ALERT privilege_change host=auth-01 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:13:40Z ALERT endpoint host=db-01 user=jdoe src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:14:00Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T09:25:29Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=21 window=60s
+2026-10-23T09:40:48Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:33:45Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:41:58Z ALERT privilege_change host=db-01 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:19:59Z ALERT endpoint host=auth-01 user=finance_user src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:05:24Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T10:02:08Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=61 window=60s
+2026-10-23T10:14:10Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:18:36Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:03:44Z ALERT privilege_change host=win-02 user=svc_backup action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T09:21:33Z ALERT endpoint host=db-01 user=root src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:20:24Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T09:10:30Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=49 window=60s
+2026-10-23T10:53:04Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:38:45Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:46:36Z ALERT privilege_change host=db-01 user=admin action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T09:15:41Z ALERT endpoint host=win-02 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:56:00Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T09:32:23Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=51 window=60s
+2026-10-23T10:17:08Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:54:09Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:21:20Z ALERT privilege_change host=db-01 user=svc_backup action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T10:39:15Z ALERT endpoint host=auth-01 user=finance_user src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:56:18Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T09:59:23Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=41 window=60s
+2026-10-23T09:26:48Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:10:54Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:38:20Z ALERT privilege_change host=web-01 user=root action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T10:38:58Z ALERT endpoint host=auth-01 user=admin src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:19:48Z WARNING auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=9
+2026-10-23T09:32:46Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=62 window=60s
+2026-10-23T10:28:10Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:33:30Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:12:16Z ALERT privilege_change host=win-02 user=admin action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T09:42:48Z ALERT endpoint host=auth-01 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:30:18Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T09:52:14Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=60 window=60s
+2026-10-23T09:44:00Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:48:45Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:12:08Z ALERT privilege_change host=workstation-07 user=svc_backup action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T11:12:52Z ALERT endpoint host=db-01 user=jdoe src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:19:12Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=3
+2026-10-23T09:32:45Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=33 window=60s
+2026-10-23T10:39:36Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:24:33Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:03:08Z ALERT privilege_change host=web-01 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T10:32:26Z ALERT endpoint host=workstation-07 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:52:30Z WARNING auth failed user=finance_user src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T10:24:32Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=45 window=60s
+2026-10-23T10:56:48Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:31:00Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:31:20Z ALERT privilege_change host=db-01 user=jdoe action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T10:45:00Z ALERT endpoint host=workstation-07 user=jdoe src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:36:24Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T11:18:31Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=45 window=60s
+2026-10-23T10:28:16Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:19:30Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:10:40Z ALERT privilege_change host=win-02 user=jdoe action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T11:40:07Z ALERT endpoint host=auth-01 user=admin src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:34:00Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=3
+2026-10-23T10:45:05Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=39 window=60s
+2026-10-23T11:04:36Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:19:30Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:08:42Z ALERT privilege_change host=win-02 user=admin action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T09:54:48Z ALERT endpoint host=db-01 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:19:12Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=4
+2026-10-23T11:27:07Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=61 window=60s
+2026-10-23T11:03:40Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:33:24Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:14:40Z ALERT privilege_change host=win-02 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T09:52:19Z ALERT endpoint host=db-01 user=finance_user src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:38:00Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=4
+2026-10-23T10:27:30Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=41 window=60s
+2026-10-23T10:13:12Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:47:42Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T09:34:22Z ALERT privilege_change host=web-01 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T10:34:29Z ALERT endpoint host=auth-01 user=finance_user src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:10:00Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T10:15:27Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=37 window=60s
+2026-10-23T09:35:38Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:30:54Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:32:48Z ALERT privilege_change host=win-02 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T09:31:30Z ALERT endpoint host=auth-01 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:33:00Z WARNING auth failed user=finance_user src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=6
+2026-10-23T09:42:20Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=47 window=60s
+2026-10-23T12:01:16Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:05:24Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:35:00Z ALERT privilege_change host=web-01 user=jdoe action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:45:52Z ALERT endpoint host=win-02 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:10:00Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T11:54:45Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=28 window=60s
+2026-10-23T09:44:40Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:06:00Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:51:44Z ALERT privilege_change host=db-01 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:17:22Z ALERT endpoint host=db-01 user=svc_backup src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:42:36Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=10
+2026-10-23T11:43:18Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=59 window=60s
+2026-10-23T11:22:40Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:57:42Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:23:56Z ALERT privilege_change host=win-02 user=jdoe action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T10:36:07Z ALERT endpoint host=workstation-07 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:52:48Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T12:03:45Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=42 window=60s
+2026-10-23T10:53:52Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:54:24Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:00:24Z ALERT privilege_change host=workstation-07 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T09:55:09Z ALERT endpoint host=win-02 user=admin src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:06:30Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=9
+2026-10-23T11:07:34Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=36 window=60s
+2026-10-23T10:46:00Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:45:27Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:14:50Z ALERT privilege_change host=auth-01 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T12:11:15Z ALERT endpoint host=workstation-07 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:21:36Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T10:48:30Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=37 window=60s
+2026-10-23T11:17:10Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:46:00Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:55:40Z ALERT privilege_change host=workstation-07 user=jdoe action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:33:27Z ALERT endpoint host=db-01 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:16:48Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T11:14:22Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=39 window=60s
+2026-10-23T12:23:44Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:06:30Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:07:58Z ALERT privilege_change host=db-01 user=root action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:47:43Z ALERT endpoint host=db-01 user=root src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:03:36Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T12:27:34Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=46 window=60s
+2026-10-23T11:06:40Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:01:21Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:24:00Z ALERT privilege_change host=win-02 user=admin action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T12:24:45Z ALERT endpoint host=win-02 user=finance_user src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:25:30Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T11:09:20Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=32 window=60s
+2026-10-23T12:21:04Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T09:53:03Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:59:00Z ALERT privilege_change host=web-01 user=jdoe action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:47:32Z ALERT endpoint host=web-01 user=jdoe src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:54:00Z WARNING auth failed user=finance_user src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T11:12:32Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=34 window=60s
+2026-10-23T10:24:48Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:25:42Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:43:48Z ALERT privilege_change host=web-01 user=admin action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T11:51:10Z ALERT endpoint host=workstation-07 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:28:24Z WARNING auth failed user=finance_user src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=9
+2026-10-23T11:40:12Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=18 window=60s
+2026-10-23T11:46:56Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:21:27Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:29:40Z ALERT privilege_change host=workstation-07 user=finance_user action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T09:51:18Z ALERT endpoint host=auth-01 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:06:00Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T11:00:17Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=39 window=60s
+2026-10-23T10:17:08Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T12:35:00Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:58:08Z ALERT privilege_change host=db-01 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T12:23:54Z ALERT endpoint host=auth-01 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T09:59:42Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T12:37:56Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=59 window=60s
+2026-10-23T10:32:00Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:57:48Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:52:52Z ALERT privilege_change host=auth-01 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T10:26:49Z ALERT endpoint host=auth-01 user=root src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:46:24Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=3
+2026-10-23T11:44:35Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=38 window=60s
+2026-10-23T12:10:54Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T12:18:00Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:07:32Z ALERT privilege_change host=auth-01 user=admin action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T11:59:53Z ALERT endpoint host=auth-01 user=jdoe src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:10:00Z WARNING auth failed user=finance_user src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=3
+2026-10-23T09:57:18Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=20 window=60s
+2026-10-23T10:23:44Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:09:57Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:24:28Z ALERT privilege_change host=auth-01 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T12:36:30Z ALERT endpoint host=web-01 user=finance_user src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:11:24Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T09:59:06Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=53 window=60s
+2026-10-23T10:19:18Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:39:36Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:40:00Z ALERT privilege_change host=web-01 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:33:43Z ALERT endpoint host=auth-01 user=admin src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:21:18Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T13:02:15Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=32 window=60s
+2026-10-23T10:21:24Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:01:30Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:36:32Z ALERT privilege_change host=workstation-07 user=svc_backup action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T10:15:40Z ALERT endpoint host=win-02 user=root src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:44:24Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=3
+2026-10-23T11:10:52Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=51 window=60s
+2026-10-23T11:18:10Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:37:33Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:02:08Z ALERT privilege_change host=web-01 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:38:19Z ALERT endpoint host=db-01 user=jdoe src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:20:06Z WARNING auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T12:02:05Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=57 window=60s
+2026-10-23T12:02:40Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T12:10:12Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:17:46Z ALERT privilege_change host=workstation-07 user=jdoe action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T13:07:16Z ALERT endpoint host=web-01 user=admin src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:54:00Z WARNING auth failed user=finance_user src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T12:19:37Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=36 window=60s
+2026-10-23T12:27:16Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:31:30Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:14:16Z ALERT privilege_change host=db-01 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T11:46:40Z ALERT endpoint host=db-01 user=jdoe src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:18:48Z WARNING auth failed user=root src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=9
+2026-10-23T12:09:05Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=25 window=60s
+2026-10-23T11:05:28Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:15:51Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:59:10Z ALERT privilege_change host=db-01 user=jdoe action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T11:21:08Z ALERT endpoint host=db-01 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:50:24Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T12:05:22Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=40 window=60s
+2026-10-23T10:17:26Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T13:33:30Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:27:00Z ALERT privilege_change host=web-01 user=root action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T12:58:37Z ALERT endpoint host=win-02 user=root src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:39:00Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=9
+2026-10-23T11:17:33Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=53 window=60s
+2026-10-23T11:10:40Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T10:34:21Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:33:38Z ALERT privilege_change host=db-01 user=svc_backup action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T11:41:30Z ALERT endpoint host=workstation-07 user=admin src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:42:48Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=10
+2026-10-23T13:41:10Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=38 window=60s
+2026-10-23T10:50:58Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T12:28:12Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:06:24Z ALERT privilege_change host=workstation-07 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T11:37:01Z ALERT endpoint host=win-02 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:22:30Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=10
+2026-10-23T12:30:36Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=28 window=60s
+2026-10-23T12:16:08Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:08:45Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:01:36Z ALERT privilege_change host=web-01 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T10:46:50Z ALERT endpoint host=auth-01 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T13:19:12Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=12
+2026-10-23T10:47:34Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=60 window=60s
+2026-10-23T12:11:54Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T12:04:48Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:59:00Z ALERT privilege_change host=win-02 user=finance_user action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T11:12:05Z ALERT endpoint host=win-02 user=finance_user src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:27:54Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=6
+2026-10-23T12:14:39Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=36 window=60s
+2026-10-23T10:42:24Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T13:41:00Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:29:42Z ALERT privilege_change host=web-01 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T11:22:22Z ALERT endpoint host=auth-01 user=svc_backup src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:22:48Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=12
+2026-10-23T12:41:24Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=51 window=60s
+2026-10-23T11:15:50Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:39:48Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:21:36Z ALERT privilege_change host=workstation-07 user=svc_backup action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T14:10:31Z ALERT endpoint host=auth-01 user=root src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T13:31:48Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T13:00:50Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=64 window=60s
+2026-10-23T13:57:00Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T14:13:39Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T14:14:26Z ALERT privilege_change host=win-02 user=admin action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T12:47:24Z ALERT endpoint host=workstation-07 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:16:00Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T11:28:26Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=64 window=60s
+2026-10-23T12:17:04Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:45:24Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:05:32Z ALERT privilege_change host=workstation-07 user=root action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T11:46:20Z ALERT endpoint host=web-01 user=root src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:06:18Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=5
+2026-10-23T12:03:30Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=37 window=60s
+2026-10-23T12:52:48Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:56:21Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:21:20Z ALERT privilege_change host=win-02 user=svc_backup action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T12:38:14Z ALERT endpoint host=win-02 user=admin src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:57:48Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=3
+2026-10-23T12:22:56Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=53 window=60s
+2026-10-23T14:26:58Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T13:46:30Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:24:32Z ALERT privilege_change host=workstation-07 user=jdoe action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T10:53:57Z ALERT endpoint host=web-01 user=finance_user src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:58:48Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T10:54:39Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=50 window=60s
+2026-10-23T12:26:40Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T12:18:51Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:27:44Z ALERT privilege_change host=win-02 user=admin action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T14:08:52Z ALERT endpoint host=web-01 user=svc_backup src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T10:39:36Z WARNING auth failed user=finance_user src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=1
+2026-10-23T14:35:35Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=44 window=60s
+2026-10-23T11:13:58Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T12:30:24Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:30:12Z ALERT privilege_change host=workstation-07 user=svc_backup action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T10:58:09Z ALERT endpoint host=db-01 user=finance_user src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:07:00Z WARNING auth failed user=root src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T13:49:11Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=32 window=60s
+2026-10-23T11:33:20Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:25:12Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:16:58Z ALERT privilege_change host=web-01 user=svc_backup action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T11:00:15Z ALERT endpoint host=workstation-07 user=admin src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T13:35:24Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T11:35:25Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=50 window=60s
+2026-10-23T11:53:06Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T13:20:03Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:38:00Z ALERT privilege_change host=workstation-07 user=svc_backup action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T11:45:46Z ALERT endpoint host=web-01 user=finance_user src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T14:48:54Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=6
+2026-10-23T13:31:14Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=44 window=60s
+2026-10-23T12:30:44Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T14:07:30Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:56:42Z ALERT privilege_change host=db-01 user=root action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T12:32:17Z ALERT endpoint host=auth-01 user=finance_user src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:24:00Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T14:54:23Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=64 window=60s
+2026-10-23T14:28:40Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T13:45:09Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:32:48Z ALERT privilege_change host=workstation-07 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T11:33:12Z ALERT endpoint host=win-02 user=jdoe src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T14:58:18Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=12
+2026-10-23T13:29:55Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=38 window=60s
+2026-10-23T14:15:12Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T13:40:06Z WARNING process host=win-02 user=jdoe image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:04:52Z ALERT privilege_change host=auth-01 user=root action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T12:56:27Z ALERT endpoint host=win-02 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:39:00Z WARNING auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=1
+2026-10-23T11:54:26Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=44 window=60s
+2026-10-23T12:03:54Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T12:31:30Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:44:32Z ALERT privilege_change host=win-02 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T13:45:10Z ALERT endpoint host=auth-01 user=root src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T14:31:18Z WARNING auth failed user=finance_user src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=8
+2026-10-23T11:29:41Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=22 window=60s
+2026-10-23T14:41:52Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T14:42:36Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T10:45:00Z ALERT privilege_change host=db-01 user=finance_user action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T10:54:29Z ALERT endpoint host=workstation-07 user=finance_user src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T13:03:36Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=1
+2026-10-23T10:45:54Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=19 window=60s
+2026-10-23T13:13:56Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T13:14:30Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:15:04Z ALERT privilege_change host=win-02 user=jdoe action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T11:05:40Z ALERT endpoint host=win-02 user=root src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:52:30Z WARNING auth failed user=finance_user src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T14:31:18Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=42 window=60s
+2026-10-23T13:26:40Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.15 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T14:14:00Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:55:56Z ALERT privilege_change host=win-02 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T15:21:01Z ALERT endpoint host=web-01 user=svc_backup src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T15:12:24Z WARNING auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T15:22:35Z ALERT auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempts=20 window=60s
+2026-10-23T11:36:58Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:27:54Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:40:48Z ALERT privilege_change host=db-01 user=finance_user action=unexpected_admin_grant src_ip=198.51.100.20 result=success
+2026-10-23T15:16:14Z ALERT endpoint host=workstation-07 user=jdoe src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:29:00Z WARNING auth failed user=admin src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=2
+2026-10-23T12:55:01Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=57 window=60s
+2026-10-23T13:52:44Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T12:08:18Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T13:34:50Z ALERT privilege_change host=auth-01 user=root action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T13:45:00Z ALERT endpoint host=auth-01 user=admin src_ip=192.0.2.77 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T14:52:48Z WARNING auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T14:24:40Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=24 window=60s
+2026-10-23T11:12:40Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T14:45:18Z WARNING process host=win-02 user=admin image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T11:42:20Z ALERT privilege_change host=auth-01 user=root action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T13:29:14Z ALERT endpoint host=auth-01 user=admin src_ip=203.0.113.45 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T12:41:18Z WARNING auth failed user=root src_ip=192.0.2.77 host=auth-01 reason=invalid_password attempt=7
+2026-10-23T10:54:54Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=64 window=60s
+2026-10-23T15:27:44Z ALERT web request src_ip=192.0.2.77 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:44:15Z WARNING process host=win-02 user=svc_backup image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:23:42Z ALERT privilege_change host=win-02 user=root action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T11:45:01Z ALERT endpoint host=auth-01 user=jdoe src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T13:23:24Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T13:23:57Z ALERT auth failed user=admin src_ip=203.0.113.45 host=auth-01 reason=invalid_password attempts=24 window=60s
+2026-10-23T11:36:20Z ALERT web request src_ip=198.51.100.20 dst_ip=10.0.0.21 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T15:13:24Z WARNING process host=win-02 user=root image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T12:36:16Z ALERT privilege_change host=auth-01 user=finance_user action=unexpected_admin_grant src_ip=203.0.113.45 result=success
+2026-10-23T12:36:44Z ALERT endpoint host=workstation-07 user=svc_backup src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending
+2026-10-23T11:47:42Z WARNING auth failed user=finance_user src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempt=11
+2026-10-23T13:27:15Z ALERT auth failed user=admin src_ip=198.51.100.20 host=auth-01 reason=invalid_password attempts=35 window=60s
+2026-10-23T15:17:04Z ALERT web request src_ip=203.0.113.45 dst_ip=10.0.0.34 host=web-01 path=/login query="username=admin' OR '1'='1" signature=SQL_INJECTION_BLOCKED action=blocked
+2026-10-23T11:58:48Z WARNING process host=win-02 user=finance_user image=powershell.exe command="powershell -enc <SIMULATED_ENCODED_COMMAND>" parent=winword.exe verdict=suspicious
+2026-10-23T14:58:36Z ALERT privilege_change host=workstation-07 user=admin action=unexpected_admin_grant src_ip=192.0.2.77 result=success
+2026-10-23T14:39:20Z ALERT endpoint host=db-01 user=root src_ip=198.51.100.20 file=invoice_update.exe verdict=malicious_simulation quarantine=pending

@@ -1,0 +1,604 @@
+# VIGILIA AI SAFE NO-THREAT DEMO LOG
+# 600 synthetic routine events for parser/testing demonstrations.
+# No real credentials, personal data, attack payloads, or public targets.
+# Expected intent: normal activity only; actual classification depends on Vigilia AI rules.
+2026-10-23 09:00:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 09:00:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 09:01:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 09:01:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 09:02:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 09:02:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 09:03:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 09:03:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 09:04:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 09:04:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 09:05:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 09:05:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 09:06:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 09:06:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 09:07:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 09:07:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 09:08:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 09:08:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 09:09:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 09:09:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 09:10:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 09:10:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 09:11:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 09:11:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 09:12:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 09:12:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 09:13:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 09:13:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 09:14:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 09:14:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 09:15:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 09:15:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 09:16:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 09:16:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 09:17:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 09:17:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 09:18:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 09:18:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 09:19:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 09:19:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 09:20:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 09:20:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 09:21:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 09:21:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 09:22:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 09:22:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 09:23:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 09:23:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 09:24:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 09:24:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 09:25:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 09:25:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 09:26:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 09:26:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 09:27:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 09:27:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 09:28:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 09:28:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 09:29:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 09:29:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 09:30:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 09:30:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 09:31:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 09:31:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 09:32:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 09:32:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 09:33:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 09:33:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 09:34:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 09:34:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 09:35:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 09:35:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 09:36:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 09:36:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 09:37:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 09:37:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 09:38:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 09:38:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 09:39:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 09:39:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 09:40:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 09:40:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 09:41:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 09:41:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 09:42:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 09:42:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 09:43:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 09:43:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 09:44:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 09:44:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 09:45:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 09:45:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 09:46:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 09:46:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 09:47:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 09:47:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 09:48:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 09:48:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 09:49:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 09:49:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 09:50:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 09:50:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 09:51:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 09:51:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 09:52:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 09:52:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 09:53:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 09:53:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 09:54:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 09:54:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 09:55:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 09:55:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 09:56:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 09:56:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 09:57:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 09:57:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 09:58:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 09:58:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 09:59:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 09:59:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 10:00:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 10:00:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 10:01:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 10:01:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 10:02:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 10:02:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 10:03:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 10:03:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 10:04:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 10:04:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 10:05:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 10:05:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 10:06:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 10:06:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 10:07:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 10:07:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 10:08:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 10:08:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 10:09:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 10:09:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 10:10:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 10:10:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 10:11:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 10:11:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 10:12:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 10:12:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 10:13:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 10:13:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 10:14:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 10:14:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 10:15:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 10:15:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 10:16:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 10:16:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 10:17:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 10:17:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 10:18:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 10:18:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 10:19:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 10:19:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 10:20:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 10:20:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 10:21:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 10:21:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 10:22:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 10:22:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 10:23:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 10:23:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 10:24:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 10:24:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 10:25:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 10:25:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 10:26:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 10:26:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 10:27:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 10:27:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 10:28:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 10:28:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 10:29:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 10:29:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 10:30:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 10:30:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 10:31:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 10:31:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 10:32:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 10:32:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 10:33:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 10:33:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 10:34:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 10:34:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 10:35:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 10:35:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 10:36:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 10:36:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 10:37:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 10:37:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 10:38:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 10:38:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 10:39:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 10:39:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 10:40:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 10:40:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 10:41:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 10:41:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 10:42:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 10:42:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 10:43:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 10:43:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 10:44:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 10:44:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 10:45:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 10:45:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 10:46:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 10:46:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 10:47:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 10:47:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 10:48:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 10:48:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 10:49:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 10:49:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 10:50:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 10:50:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 10:51:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 10:51:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 10:52:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 10:52:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 10:53:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 10:53:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 10:54:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 10:54:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 10:55:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 10:55:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 10:56:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 10:56:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 10:57:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 10:57:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 10:58:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 10:58:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 10:59:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 10:59:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 11:00:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 11:00:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 11:01:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 11:01:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 11:02:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 11:02:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 11:03:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 11:03:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 11:04:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 11:04:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 11:05:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 11:05:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 11:06:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 11:06:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 11:07:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 11:07:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 11:08:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 11:08:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 11:09:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 11:09:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 11:10:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 11:10:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 11:11:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 11:11:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 11:12:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 11:12:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 11:13:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 11:13:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 11:14:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 11:14:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 11:15:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 11:15:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 11:16:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 11:16:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 11:17:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 11:17:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 11:18:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 11:18:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 11:19:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 11:19:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 11:20:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 11:20:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 11:21:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 11:21:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 11:22:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 11:22:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 11:23:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 11:23:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 11:24:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 11:24:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 11:25:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 11:25:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 11:26:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 11:26:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 11:27:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 11:27:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 11:28:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 11:28:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 11:29:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 11:29:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 11:30:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 11:30:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 11:31:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 11:31:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 11:32:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 11:32:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 11:33:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 11:33:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 11:34:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 11:34:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 11:35:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 11:35:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 11:36:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 11:36:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 11:37:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 11:37:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 11:38:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 11:38:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 11:39:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 11:39:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 11:40:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 11:40:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 11:41:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 11:41:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 11:42:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 11:42:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 11:43:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 11:43:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 11:44:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 11:44:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 11:45:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 11:45:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 11:46:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 11:46:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 11:47:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 11:47:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 11:48:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 11:48:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 11:49:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 11:49:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 11:50:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 11:50:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 11:51:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 11:51:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 11:52:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 11:52:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 11:53:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 11:53:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 11:54:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 11:54:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 11:55:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 11:55:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 11:56:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 11:56:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 11:57:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 11:57:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 11:58:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 11:58:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 11:59:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 11:59:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 12:00:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 12:00:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 12:01:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 12:01:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 12:02:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 12:02:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 12:03:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 12:03:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 12:04:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 12:04:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 12:05:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 12:05:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 12:06:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 12:06:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 12:07:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 12:07:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 12:08:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 12:08:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 12:09:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 12:09:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 12:10:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 12:10:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 12:11:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 12:11:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 12:12:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 12:12:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 12:13:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 12:13:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 12:14:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 12:14:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 12:15:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 12:15:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 12:16:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 12:16:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 12:17:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 12:17:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 12:18:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 12:18:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 12:19:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 12:19:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 12:20:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 12:20:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 12:21:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 12:21:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 12:22:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 12:22:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 12:23:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 12:23:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 12:24:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 12:24:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 12:25:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 12:25:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 12:26:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 12:26:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 12:27:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 12:27:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 12:28:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 12:28:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 12:29:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 12:29:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 12:30:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 12:30:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 12:31:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 12:31:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 12:32:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 12:32:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 12:33:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 12:33:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 12:34:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 12:34:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 12:35:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 12:35:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 12:36:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 12:36:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 12:37:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 12:37:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 12:38:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 12:38:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 12:39:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 12:39:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 12:40:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 12:40:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 12:41:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 12:41:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 12:42:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 12:42:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 12:43:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 12:43:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 12:44:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 12:44:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 12:45:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 12:45:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 12:46:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 12:46:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 12:47:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 12:47:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 12:48:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 12:48:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 12:49:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 12:49:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 12:50:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 12:50:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 12:51:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 12:51:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 12:52:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 12:52:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 12:53:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 12:53:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 12:54:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 12:54:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 12:55:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 12:55:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 12:56:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 12:56:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 12:57:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 12:57:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 12:58:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 12:58:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 12:59:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 12:59:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 13:00:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 13:00:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 13:01:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 13:01:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 13:02:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 13:02:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 13:03:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 13:03:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 13:04:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 13:04:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 13:05:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 13:05:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 13:06:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 13:06:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 13:07:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 13:07:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 13:08:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 13:08:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 13:09:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 13:09:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 13:10:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 13:10:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 13:11:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 13:11:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 13:12:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 13:12:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 13:13:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 13:13:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 13:14:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 13:14:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 13:15:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 13:15:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 13:16:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 13:16:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 13:17:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 13:17:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 13:18:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 13:18:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 13:19:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 13:19:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 13:20:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 13:20:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 13:21:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 13:21:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 13:22:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 13:22:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 13:23:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 13:23:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 13:24:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 13:24:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 13:25:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 13:25:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 13:26:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 13:26:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 13:27:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 13:27:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 13:28:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 13:28:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 13:29:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 13:29:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 13:30:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 13:30:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 13:31:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 13:31:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 13:32:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 13:32:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 13:33:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 13:33:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 13:34:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 13:34:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 13:35:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 13:35:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 13:36:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 13:36:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 13:37:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 13:37:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 13:38:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 13:38:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 13:39:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 13:39:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 13:40:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 13:40:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 13:41:00 INFO host=WORKSTATION-03 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 13:41:30 INFO host=SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 13:42:00 INFO host=SERVER-02 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 13:42:30 INFO host=WEB-SERVER-01 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 13:43:00 INFO host=FILE-SERVER-01 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 13:43:30 INFO host=FIREWALL-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 13:44:00 INFO host=WORKSTATION-01 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 13:44:30 INFO host=WORKSTATION-02 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 13:45:00 INFO host=WORKSTATION-03 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 13:45:30 INFO host=SERVER-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 13:46:00 INFO host=SERVER-02 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 13:46:30 INFO host=WEB-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 13:47:00 INFO host=FILE-SERVER-01 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 13:47:30 INFO host=FIREWALL-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 13:48:00 INFO host=WORKSTATION-01 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 13:48:30 INFO host=WORKSTATION-02 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 13:49:00 INFO host=WORKSTATION-03 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 13:49:30 INFO host=SERVER-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200
+2026-10-23 13:50:00 INFO host=SERVER-02 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 13:50:30 INFO host=WEB-SERVER-01 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 13:51:00 INFO host=FILE-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Application started" application=security_dashboard status=success
+2026-10-23 13:51:30 INFO host=FIREWALL-01 user=monitoring_service src_ip=192.168.1.20 event="Scheduled backup completed" status=success
+2026-10-23 13:52:00 INFO host=WORKSTATION-01 user=web_service src_ip=192.168.1.30 event="Health check successful" status_code=200
+2026-10-23 13:52:30 INFO host=WORKSTATION-02 user=analyst src_ip=192.168.1.10 event="Page requested" method=GET path="/dashboard" status_code=200
+2026-10-23 13:53:00 INFO host=WORKSTATION-03 user=employee src_ip=192.168.1.11 event="Routine policy check completed" status=success
+2026-10-23 13:53:30 INFO host=SERVER-01 user=backup_service src_ip=192.168.1.12 event="System metrics collected" status=success
+2026-10-23 13:54:00 INFO host=SERVER-02 user=monitoring_service src_ip=192.168.1.20 event="Routine update check completed" status=success
+2026-10-23 13:54:30 INFO host=WEB-SERVER-01 user=web_service src_ip=192.168.1.30 event="MFA verification successful" status=success
+2026-10-23 13:55:00 INFO host=FILE-SERVER-01 user=analyst src_ip=192.168.1.10 event="Session locked" status=success
+2026-10-23 13:55:30 INFO host=FIREWALL-01 user=employee src_ip=192.168.1.11 event="DNS lookup completed" domain=internal.example status=success
+2026-10-23 13:56:00 INFO host=WORKSTATION-01 user=backup_service src_ip=192.168.1.12 event="Service heartbeat received" status=success
+2026-10-23 13:56:30 INFO host=WORKSTATION-02 user=monitoring_service src_ip=192.168.1.20 event="Database connection healthy" status=success
+2026-10-23 13:57:00 INFO host=WORKSTATION-03 user=web_service src_ip=192.168.1.30 event="Configuration backup completed" status=success
+2026-10-23 13:57:30 INFO host=SERVER-01 user=analyst src_ip=192.168.1.10 event="Scheduled task completed" status=success
+2026-10-23 13:58:00 INFO host=SERVER-02 user=employee src_ip=192.168.1.11 event="Certificate validity check passed" status=success
+2026-10-23 13:58:30 INFO host=WEB-SERVER-01 user=backup_service src_ip=192.168.1.12 event="Disk health check passed" status=success
+2026-10-23 13:59:00 INFO host=FILE-SERVER-01 user=monitoring_service src_ip=192.168.1.20 event="Approved software launched" status=success
+2026-10-23 13:59:30 INFO host=FIREWALL-01 user=web_service src_ip=192.168.1.30 event="Routine API request completed" method=GET status_code=200

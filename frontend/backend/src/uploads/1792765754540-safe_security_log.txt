@@ -1,0 +1,12 @@
+2026-10-23 09:00:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success
+2026-10-23 09:01:15 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="File access" file=security_report.pdf status=success
+2026-10-23 09:05:10 WARN host=SERVER-01 user=admin src_ip=192.0.2.10 event="Failed login" status=failure
+2026-10-23 09:05:13 WARN host=SERVER-01 user=admin src_ip=192.0.2.10 event="Failed login" status=failure
+2026-10-23 09:05:17 WARN host=SERVER-01 user=admin src_ip=192.0.2.10 event="Failed login" status=failure
+2026-10-23 09:05:22 INFO host=SERVER-01 user=admin src_ip=192.0.2.10 event="Successful login" status=success
+2026-10-23 09:07:30 WARN host=WEB-SERVER-01 src_ip=198.51.100.20 event="Possible SQL injection pattern detected" path="/search" action=blocked
+2026-10-23 09:08:10 INFO host=WEB-SERVER-01 src_ip=198.51.100.20 event="Request blocked" service=web_firewall status=blocked
+2026-10-23 09:10:00 WARN host=WORKSTATION-02 user=employee event="Suspicious PowerShell parent process" parent=winword.exe action=alert_only
+2026-10-23 09:12:00 INFO host=WORKSTATION-01 user=analyst event="MFA verification successful" status=success
+2026-10-23 09:15:00 INFO host=SERVER-01 service=backup event="Scheduled backup completed" status=success
+2026-10-23 09:20:00 INFO host=FIREWALL-01 event="Policy check completed" status=success

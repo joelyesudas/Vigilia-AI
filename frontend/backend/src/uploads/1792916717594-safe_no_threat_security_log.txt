@@ -1,0 +1,19 @@
+# SAFE DEMO SECURITY LOG — NORMAL ACTIVITY ONLY
+# Purpose: test a no-threat result in Vigilia AI.
+# All entries are synthetic. No real users, credentials, or systems are represented.
+# Expected interpretation: routine successful activity; no threat indicators recorded.
+
+2026-10-23 09:00:00 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Successful login" status=success mfa=passed
+2026-10-23 09:01:15 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="File access" file=security_report.pdf status=success
+2026-10-23 09:03:20 INFO host=WORKSTATION-01 user=analyst src_ip=192.168.1.10 event="Application started" application=security_dashboard status=success
+2026-10-23 09:05:00 INFO host=SERVER-01 user=backup_service event="Scheduled backup started" status=success
+2026-10-23 09:05:45 INFO host=SERVER-01 user=backup_service event="Scheduled backup completed" status=success
+2026-10-23 09:08:10 INFO host=WEB-SERVER-01 src_ip=192.168.1.10 method=GET path="/health" status_code=200 event="Health check successful"
+2026-10-23 09:10:00 INFO host=WEB-SERVER-01 src_ip=192.168.1.10 method=GET path="/dashboard" status_code=200 event="Page requested"
+2026-10-23 09:12:00 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="Successful login" status=success mfa=passed
+2026-10-23 09:13:30 INFO host=WORKSTATION-02 user=employee src_ip=192.168.1.11 event="File access" file=team_schedule.pdf status=success
+2026-10-23 09:15:00 INFO host=FIREWALL-01 event="Routine policy check completed" status=success
+2026-10-23 09:18:00 INFO host=SERVER-01 service=monitoring event="System metrics collected" status=success
+2026-10-23 09:20:00 INFO host=SERVER-01 service=updates event="Routine update check completed" status=success
+2026-10-23 09:25:00 INFO host=WORKSTATION-01 user=analyst event="Session locked" status=success
+2026-10-23 09:30:00 INFO host=WEB-SERVER-01 src_ip=192.168.1.10 method=GET path="/status" status_code=200 event="Status request completed"
